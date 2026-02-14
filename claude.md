@@ -1,5 +1,0 @@
--Always push to github after major changes
--dont give huge commits commit like a human
--dont mention ur name anywhere like 'made by claude'
-- add more rules if u need time to time 
--code like a human dont use any emojies atall
