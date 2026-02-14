@@ -27,6 +27,7 @@ build/
 .coverage
 htmlcov/
 .pytest_cache/
+coverage/
 
 # Logs
 *.log
@@ -34,6 +35,26 @@ htmlcov/
 # Docker
 volumes/
 
+# ML/Data Science
+*.pkl
+*.h5
+*.pt
+*.pth
+mlruns/
+data/
+datasets/
+*.parquet
+
+# Frontend
+.next/
+*.tsbuildinfo
+
+# Kubernetes/Infrastructure
+*.tfstate
+*.tfstate.backup
+.terraform/
+secrets/
+
 # Local docs
 docs/plans/
-claude.md
+CLAUDE.md
