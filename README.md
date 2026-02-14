@@ -32,9 +32,6 @@ docker compose exec recommendation-service python -m app.ml.embed_products
 # Recommendation API: http://localhost:8000
 ```
 
-## Architecture
-
-See `docs/plans/2026-02-13-ecommerce-platform-design.md` for detailed design.
 
 ## Development
 
