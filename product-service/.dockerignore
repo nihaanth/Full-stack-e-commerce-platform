@@ -5,3 +5,7 @@ npm-debug.log
 .git
 .gitignore
 *.md
+coverage
+*.log
+.vscode
+.idea
