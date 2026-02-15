@@ -58,7 +58,9 @@ export class ProductRepository {
   }
 
   async update(id: string, data: Partial<IProduct>): Promise<IProduct | null> {
-    return Product.findByIdAndUpdate(id, data, { new: true });
+    // Prevent SKU updates - SKU should be immutable
+    const { sku, ...updateData } = data;
+    return Product.findByIdAndUpdate(id, updateData, { new: true });
   }
 
   async delete(id: string): Promise<boolean> {

@@ -18,17 +18,17 @@ export interface IProduct extends Document {
 
 const ProductSchema = new Schema<IProduct>(
   {
-    sku: { type: String, required: true, unique: true },
-    name: { type: String, required: true, index: 'text' },
-    description: { type: String, required: true, index: 'text' },
-    category: { type: String, required: true, index: true },
-    subcategory: { type: String, required: true },
-    price: { type: Number, required: true, index: true },
-    brand: { type: String, required: true, index: true },
+    sku: { type: String, required: true, unique: true, trim: true },
+    name: { type: String, required: true, index: 'text', trim: true },
+    description: { type: String, required: true, index: 'text', trim: true },
+    category: { type: String, required: true, index: true, trim: true },
+    subcategory: { type: String, required: true, trim: true },
+    price: { type: Number, required: true, index: true, min: 0 },
+    brand: { type: String, required: true, index: true, trim: true },
     image_url: { type: String, required: true },
     features: [{ type: String }],
     specifications: { type: Map, of: String },
-    stock: { type: Number, required: true, default: 0 }
+    stock: { type: Number, required: true, default: 0, min: 0 }
   },
   {
     timestamps: true
